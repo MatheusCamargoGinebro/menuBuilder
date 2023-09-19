@@ -1,4 +1,17 @@
-public class menuBuild {
+import java.util.Scanner;
+
+public class MenuBuilder {
+    // Método responsável por limpar a tela:
+    public static void clearScreen() {
+        System.out.print("\033[H\033[2J");
+    }
+
+    // Método responsável por pausar a execução do programa:
+    public static void pause(Scanner pauser) {
+        System.out.print("\nPressione ENTER para continuar...");
+        pauser.nextLine();
+    }
+
     // Método responsável por construir o menu
     public static int buildMenu(String title, String options) {
         // Verifica se o título é nulo
